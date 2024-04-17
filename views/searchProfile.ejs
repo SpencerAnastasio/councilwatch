@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head/head') %>
+  <body>
+    <%- include('partials/nav/nav') %>
+    <h1>Nashville Council Watch</h1>
+    <h2>Welcome to the search page for
+      <% var words = member.split(" ");var name = "";for(let i=0; i < words.length; i++){words[i] = words[i][0].toUpperCase() + words[i].substr(1).toLowerCase();if(i == (words.length - 1)){name += words[i];}else{name += (words[i] + " ");};}; %>
+      <%= name %>
+    </h2>
+    <h3>This is <%= name %>'s voting record.</h3>
+    <p>This member votes for Progressive causes.</p>
+    <%- include('partials/script/script') %>
+  </body>
+</html>

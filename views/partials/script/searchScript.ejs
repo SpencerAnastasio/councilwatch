@@ -1,0 +1,12 @@
+<script async type="text/javascript">
+  function submitQuery(){
+    if(document.getElementById('member').value){
+      var name = "/search/" + document.getElementById('member').value.replace(/ +/g, "+").substring(0).toLowerCase();
+      $("#searchMember").attr("action", name);
+      $("#searchMember").attr("method", "POST");
+      $("#searchMember").submit();
+    }else{
+      return;
+    };
+  };
+</script>

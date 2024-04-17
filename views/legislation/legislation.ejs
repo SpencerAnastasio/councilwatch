@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head/head') %>
+  <body>
+    <%- include('../partials/nav/nav') %>
+    <div class="under-nav">
+      <h1>Search Legislative Matters By:</h1>
+      <div id="matter-cards" class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card" style="width: 24rem;">
+            <div class="card-body">
+              <h2 class="card-title">Types</h2>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% types.forEach(function(t){ %>
+                <a href="legislation/types/<%= t.id %>"><li class="list-group-item"><%= t.name %></li></a>
+              <% }); %>
+            </ul>
+            <!-- <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 24rem;">
+            <div class="card-body">
+              <h2 class="card-title">Statuses</h2>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% statuses.forEach(function(s){ %>
+                <a href="legislation/statuses/<%= s.id %>"><li class="list-group-item"><%= s.name %></li></a>
+              <% }); %>
+            </ul>
+            <!-- <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 24rem;">
+            <div class="card-body">
+              <h2 class="card-title">Requesters</h2>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% requesters.forEach(function(r){ %>
+                <a href="legislation/requesters/<%= r.name %>"><li class="list-group-item"><%= r.name %></li></a>
+              <% }); %>
+            </ul>
+            <!-- <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/script/script') %>
+    <script>
+     var types = <%- JSON.stringify(types) %>
+     var statuses = <%- JSON.stringify(statuses) %>
+     var requesters = <%- JSON.stringify(requesters) %>
+   </script>
+    <script type="text/javascript" src="js/matter.js"></script>
+  </body>
+</html>

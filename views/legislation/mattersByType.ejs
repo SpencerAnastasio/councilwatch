@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head/head') %>
+  <body>
+    <%- include('../partials/nav/nav') %>
+    <div class="under-nav">
+      <% for (let i = 0; i < matters.length; i++){ %>
+        <% if(matters[i].type){ %>
+          <h1>Matter Type: <%= matters[i].type %></h1>
+          <% break; %>
+        <% }; %>
+      <% }; %>
+      <div id="matter-cards" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </div>
+    <%- include('../partials/script/script') %>
+    <script>
+     var matters = <%- JSON.stringify(matters) %>
+   </script>
+    <script type="text/javascript" src="/js/matterByType.js"></script>
+  </body>
+</html>

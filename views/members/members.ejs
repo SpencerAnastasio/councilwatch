@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head/head') %>
+  <body>
+    <%- include('../partials/nav/nav') %>
+    <div class="under-nav">
+      <h1>Search Council Members</h1>
+      <div id="member-cards" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </div>
+    <%- include('../partials/script/script') %>
+    <script>
+     var members = <%- JSON.stringify(members) %>
+   </script>
+    <script type="text/javascript" src="js/member.js"></script>
+  </body>
+</html>

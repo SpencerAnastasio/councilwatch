@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head/head') %>
+  <body>
+    <%- include('partials/nav/nav') %>
+    <div class="under-nav">
+      <h1>Nashville Council Watch
+      <h2>Welcome to the home of the Nashville's concerned citizens.</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/images/assembly.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="/members"><h5 class="card-title">Members</h5></a><h5 class="card-title"> and </h5><a href="/bodies"><h5 class="card-title">Bodies</h5></a>
+              <p class="card-text">Find council member's voting records, contact information, website, social media, committee memberships, and sponsored legislation.</p>
+              <p class="card-text">Browse committee records including meeting history, members, and pending legislation.</p>
+            </div>
+            <!-- <div class="card-footer">
+              <small class="text-body-secondary">text here</small>
+            </div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/images/house.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="/meetings"><h5 class="card-title">Meetings</h5></a><h5 class="card-title"> and </h5><a href="/meetings"><h5 class="card-title">Agendas</h5></a>
+              <p class="card-text">Browse Metro Council meetings and Committee meetings. A meeting record will contain the date, time, and location of the meeting, a list of all considered legislation, the notice, the agenda and the recorded minutes.</p>
+            </div>
+            <!-- <div class="card-footer">
+              <small class="text-body-secondary">text here</small>
+            </div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/images/gavel.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="/legislation"><h5 class="card-title">Legislation</h5></a>
+              <p class="card-text">View ordinances, resolutions, and other legislation. Legislative records contain detailed information including sponsors, actions taken, important dates, passage/failure status, full text of the legislation, and a downloadable .pdf of the legislative document.</p>
+            </div>
+            <!-- <div class="card-footer">
+              <small class="text-body-secondary">text here</small>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('partials/script/script') %>
+  </body>
+</html>

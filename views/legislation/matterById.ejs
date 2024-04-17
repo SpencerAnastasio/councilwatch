@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head/head') %>
+  <body>
+    <%- include('../partials/nav/nav') %>
+    <div class="under-nav">
+      <h1>Matter Info</h1>
+      <div class="card" style="width: max;">
+        <div class="card-body">
+          <h5 class="card-title"><%= matter[0].type %></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+          <p class="card-text"><%= matter[0].title %></p>
+          <a href="#" class="card-link">Status: <%= matter[0].status %></a>
+          <a href="#" class="card-link">Body: <%= matter[0].body %></a>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/script/script') %>
+    <script>
+     var matter = <%- JSON.stringify(matter) %>
+   </script>
+    <script type="text/javascript" src="/js/member.js"></script>
+  </body>
+</html>
